@@ -1,9 +1,9 @@
 {
-  "name": "ied",
+  "name": "etm",
   "version": "1.0.0",
   "main": "lib/index.js",
   "bin": {
-    "ied": "bin/cmd.js"
+    "etm": "bin/cmd.js"
   },
   "dependencies": {
     "archy": "^1.0.0",
@@ -36,20 +36,20 @@
   },
   "scripts": {
     "test": "mocha",
-    "pretest": "npm run lint && rimraf test/integration/node_modules",
+    "pretest": "npm run lint && rimraf test/integration/views/themes",
     "lint": "standard | snazzy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexanderGugel/ied.git"
+    "url": "git+https://github.com/JumpLink/etm.git"
   },
   "author": "Alexander Gugel <alexander.gugel@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexanderGugel/ied/issues"
+    "url": "https://github.com/JumpLink/etm/issues"
   },
-  "homepage": "https://github.com/alexanderGugel/ied#readme",
-  "description": "An alternative package manager for Node.",
+  "homepage": "https://github.com/JumpLink/etm#readme",
+  "description": "Theme manager for Express.js.",
   "directories": {
     "example": "example",
     "test": "test"

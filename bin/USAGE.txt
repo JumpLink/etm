@@ -1,4 +1,4 @@
-ied is a package manager for Node.
+etm is a theme manager for Express.js.
 
 Usage:
 

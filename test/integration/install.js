@@ -21,7 +21,7 @@ describe('install', function () {
   ]
 
   function reset (done) {
-    rimraf(path.join(__dirname, 'node_modules'), function (err) {
+    rimraf(path.join(__dirname, 'views', 'themes'), function (err) {
       done(err && err.code !== 'ENOTDIR' ? err : null)
     })
   }
@@ -35,14 +35,14 @@ describe('install', function () {
     it('should install ' + name + '@' + version, function (done) {
       install(__dirname, {_: ['', name + '@' + version]}, function (err) {
         assert.ifError(err)
-        require(name)
-        assert(pathIsInside(require.resolve(name), __dirname), 'should resolve package from the target directory')
+        require(path.join(__dirname, 'views', 'themes', name))
+        assert(pathIsInside(require.resolve(path.join(__dirname, 'views', 'themes', name)), __dirname), 'should resolve package from the target directory')
         if (scenario.checkCli) {
-          var binPath = path.join('.bin', name)
+          var binPath = path.join('.bin', __dirname, 'views', 'themes', name)
           assert(pathIsInside(require.resolve(binPath), __dirname), 'should resolve excutables from the target dir')
         }
         if (semver.valid(version)) {
-          var actualVersion = require(name + '/package.json').version
+          var actualVersion = require(path.join(__dirname, 'views', 'themes', name) + '/package.json').version
           assert(semver.satisfies(actualVersion, version), actualVersion + ' should satisfy' + version)
         }
         done()
