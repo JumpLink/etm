@@ -2,7 +2,7 @@ etm is a theme manager for Express.js.
 
 Usage:
 
-  ied command [arguments]
+  etm command [arguments]
 
 The commands are:
 
@@ -27,14 +27,14 @@ Flags:
   -r, --registry  use a custom registry (default: http://registry.npmjs.org/)
 
 Example:
-  ied install
-  ied install <pkg>
-  ied install <pkg>@<version>
-  ied install <pkg>@<version range>
+  etm install
+  etm install <pkg>
+  etm install <pkg>@<version>
+  etm install <pkg>@<version range>
 
-  Can specify one or more: ied install semver@^5.0.1 tape
-  If no argument is supplied, installs dependencies from package.json.
+  Can specify one or more: etm install semver@^5.0.1 tape
+  If no argument is suppletm, installs dependencies from package.json.
   Sub-commands can also be called via their shorthand aliases.
 
-README:  https://github.com/alexanderGugel/ied
-ISSUES:  https://github.com/alexanderGugel/ied/issues
+README:  https://github.com/JumpLink/etm
+ISSUES:  https://github.com/JumpLink/etm/issues
